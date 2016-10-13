@@ -16,7 +16,7 @@ class IIIFTag < Liquid::Tag
 
   def render(context)
     <<-MARKUP.strip
-<script src="osd/openseadragon.min.js"></script>
+<script src="/osd/openseadragon.min.js"></script>
 <div id="openseadragon1"></div>  
 <script>
 //<![CDATA[
@@ -24,7 +24,7 @@ class IIIFTag < Liquid::Tag
           OpenSeadragon({
   id: "openseadragon1",
   minZoomImageRatio: 1,
-  prefixUrl: "osd/images/",
+  prefixUrl: "/osd/images/",
   tileSources: "tiles\/#{ lookup(context, @image) }/info.json",
   crossOriginPolicy: false});
         }
