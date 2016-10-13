@@ -18,7 +18,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 # load the file as a string
 data = File.read("tiles/" + basename + "/info.json") 
 # globally substitute "install" for "latest"
-data.gsub!(/\"\@id\"\: \"/, '"@id": "tiles/') 
+data.gsub!(/\"\@id\"\: \"/, '"@id": "/tiles/') 
 # open the file for writing
 File.open("tiles/" + basename + "/info.json", "w") do |f|
   f.write(data)
